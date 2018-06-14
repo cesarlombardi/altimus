@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.br.algamoney.event.RecursoCriadoEvent;
 import com.br.algamoney.model.Lancamento;
-import com.br.algamoney.model.Pessoa;
 import com.br.algamoney.repository.LancamentoRepository;
 import com.br.algamoney.repository.filter.LancamentoFilter;
 import com.br.algamoney.repository.projection.ResumoLancamento;
@@ -30,7 +29,7 @@ import com.br.algamoney.service.LancamentoService;
 
 @RestController
 @RequestMapping("/lancamento")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class LancamentoResource {
 
 	@Autowired

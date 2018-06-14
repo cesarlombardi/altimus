@@ -28,7 +28,7 @@ import com.br.algamoney.service.PessoaService;
 
 @RestController
 @RequestMapping("/pessoa")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class PessoaResource {
 
 	@Autowired

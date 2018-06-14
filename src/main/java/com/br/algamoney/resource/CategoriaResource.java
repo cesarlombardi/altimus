@@ -23,7 +23,7 @@ import com.br.algamoney.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/categorias")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class CategoriaResource {
 
 	@Autowired
