@@ -12,10 +12,8 @@ CREATE TABLE pessoa(
 	estado VARCHAR(2)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-insert into pessoa(nome, ativo) values ('Angelo', true);
-insert into pessoa(nome, ativo) values ('Anfredo', false);
-INSERT INTO pessoa	(nome, logradouro, numero, bairro, cep, cidade, estado, ativo) 
-			VALUES 	('Tiago', 'Araranguá', '14', 'Garcia', '89020-301', 'Blumenau', 'SC', TRUE);
-INSERT INTO pessoa	(nome, logradouro, numero, bairro, cep, cidade, estado, ativo) 
-			VALUES 	('Antonia', 'Amazonas', '20', 'Garcia', '89020-300', 'Blumenau', 'SC', TRUE);
+INSERT INTO pessoa	(nome, logradouro, numero, bairro, complemento, cep, cidade, estado, ativo) 
+			VALUES 	('Tiago', 'Araranguá', '14', 'Garcia', '', '89020-301', 'Blumenau', 'SC', TRUE);
+INSERT INTO pessoa	(nome, logradouro, numero, bairro, complemento, cep, cidade, estado, ativo) 
+			VALUES 	('Antonia', 'Amazonas', '20', 'Garcia', '', '89020-300', 'Blumenau', 'SC', TRUE);
 
