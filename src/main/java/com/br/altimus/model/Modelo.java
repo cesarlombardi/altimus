@@ -1,4 +1,4 @@
-package com.br.algamoney.model;
+package com.br.altimus.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,43 +6,41 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria {
+@Table(name = "modelo")
+public class Modelo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+	private int id;
 	
 	@NotNull
-	@Size(min = 3, max = 20)
-	private String nome;
-	
+	private String modelo;
 	
 
-	public Long getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getModelo() {
+		return modelo;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((modelo == null) ? 0 : modelo.hashCode());
 		return result;
 	}
 
@@ -54,14 +52,14 @@ public class Categoria {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Categoria other = (Categoria) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
+		Modelo other = (Modelo) obj;
+		if (id != other.id)
+			return false;
+		if (modelo == null) {
+			if (other.modelo != null)
 				return false;
-		} else if (!codigo.equals(other.codigo))
+		} else if (!modelo.equals(other.modelo))
 			return false;
 		return true;
 	}
-	
-	
 }
